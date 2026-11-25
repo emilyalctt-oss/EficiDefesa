@@ -1,65 +1,152 @@
 # EficiAgro V3.2.2
 
-Ferramenta local de apoio à análise energética e comparação condicional de custos em irrigação de café. Não dimensiona a instalação, não calcula evapotranspiração, não verifica demanda hídrica e não certifica eficiência de campo.
+O EficiAgro é um protótipo computacional desenvolvido para auxiliar na análise do desempenho energético de sistemas de irrigação na cafeicultura. A ferramenta integra parâmetros hidráulicos, energéticos, operacionais e econômicos, possibilitando a comparação de diferentes cenários de funcionamento.
 
-## Instalação e uso
+## Funcionalidades
 
-Ambiente verificado: Python 3.12. Recomendado ambiente virtual dedicado.
+- Estimativa do consumo de energia elétrica;
+- Cálculo da potência hidráulica;
+- Análise dos rendimentos do conjunto motobomba;
+- Estimativa do volume de água bombeado;
+- Cálculo de indicadores energéticos;
+- Análise dos custos operacionais;
+- Simulação de descontos tarifários;
+- Comparação de cenários;
+- Estimativa de economia financeira e payback simples;
+- Consulta à base de conhecimento técnico;
+- Exportação de relatórios em PDF, Excel e TXT.
+
+## Cenários de análise
+
+O programa considera cinco condições de operação:
+
+1. Condição atual;
+2. Aplicação de desconto tarifário;
+3. Redução do tempo de funcionamento;
+4. Redução hipotética da potência elétrica do conjunto motobomba;
+5. Combinação das intervenções.
+
+## Tecnologias utilizadas
+
+- Python;
+- Streamlit;
+- Pandas;
+- SQLite;
+- Openpyxl;
+- ReportLab;
+- Pytest.
+
+## Instalação e execução
+
+Recomenda-se a utilização de um ambiente virtual dedicado.
+
+Criação do ambiente:
 
 ```bash
 python -m venv .venv
 ```
 
-Windows: `.venv\Scripts\activate`. Linux/macOS: `source .venv/bin/activate`.
+Ativação no Windows:
+
+```bash
+.venv\Scripts\activate
+```
+
+Ativação no Linux ou macOS:
+
+```bash
+source .venv/bin/activate
+```
+
+Instalação das dependências:
 
 ```bash
 python -m pip install -r requirements.txt
+```
+
+Execução da aplicação:
+
+```bash
 python -m streamlit run app.py
 ```
 
-Os valores iniciais são um caso sintético. Substitua-os por dados documentados antes de qualquer análise real. A potência solicitada é elétrica ativa na entrada, não potência nominal de eixo.
+Os valores apresentados inicialmente correspondem a um caso sintético. Para análises específicas, devem ser substituídos pelos dados do sistema avaliado.
 
-## Verificação reproduzível
+A potência elétrica informada deve corresponder à potência ativa de entrada do conjunto motobomba, e não à potência nominal de eixo.
 
-Na pasta do projeto:
+## Estrutura do projeto
+
+| Arquivo ou diretório | Descrição |
+|---|---|
+| `app.py` | Interface da aplicação |
+| `core/` | Modelos, cálculos, indicadores, cenários e exportações |
+| `database/BCCI/` | Base de conhecimento técnico |
+| `tests/` | Testes automatizados |
+| `scripts/` | Rotinas de verificação numérica |
+| `validation/` | Registros e resultados das verificações |
+| `docs/` | Documentação técnica |
+| `requirements.txt` | Dependências da aplicação |
+
+## Verificação computacional
+
+A verificação dos modelos implementados contempla testes automatizados, comparações numéricas e análise da consistência dos resultados.
+
+Execução dos testes:
 
 ```bash
 python -m pytest -q --junitxml=validation/results/pytest.xml
+```
+
+Reprodução das comparações numéricas:
+
+```bash
 python scripts/verify_numeric.py
 ```
 
-`validation/results` contém entradas, resultados, referências numéricas, tolerâncias e ambiente. A comparação publicada usa somente potências do Exemplo 6.1 de Gomes (2013), com HMT fornecida; não reproduz o dimensionamento de tubulações nem a anualização de 365 dias do livro.
+Os dados de entrada, resultados, referências numéricas e tolerâncias adotadas encontram-se no diretório `validation/results/`.
 
-## Como interpretar
+A comparação com a literatura considera as potências hidráulica e elétrica apresentadas no Exemplo 6.1 de Gomes (2013), utilizando a altura manométrica total fornecida.
 
-- A energia usa potência elétrica declarada e tempo; a potência hidráulica e a potência elétrica estimada são indicadores separados.
-- Menos tempo à vazão constante significa menos água. Não afirmar ganho de eficiência só pela redução de kWh.
-- A redução de potência é hipótese; manter vazão e HMT precisa ser comprovado no conjunto real.
-- A tarifa é uniforme fora das horas elegíveis. Benefício, percentual e escala devem ser confirmados com a distribuidora. O modelo adota até 8,5 h/dia; não cobre exceções regulatórias.
-- O custo não contém parcelas de demanda, encargos, tributos ou bandeiras calculados separadamente. A tarifa inserida deve ter composição documentada e o desconto deve ser aplicável à parcela modelada.
-- O menor custo simulado ignora investimento no ranking. O payback simples é apresentado separadamente; investimento zero e economia positiva resultam em zero meses, sem presumir ausência de outros custos.
-- Não há classificação automática de confiabilidade, faixas universais de desempenho ou recomendação automática de investimento.
+## Premissas do modelo
 
-## Estrutura
+O consumo de energia elétrica é calculado a partir da potência elétrica ativa e do tempo de funcionamento.
 
-`app.py`: interface. `core/`: modelos, validação, cálculos, cenários, indicadores, orientações, exportações, SQLite. `database/BCCI/`: base técnica consultável. `tests/`: regressão e integração. `scripts/`: reprodução dos resultados. `docs/`: decisões, auditoria e histórico.
+A redução do tempo de operação, quando mantida a vazão, implica redução do volume de água bombeado, não representando necessariamente melhoria da eficiência energética.
 
-## Histórico e privacidade
+Os cenários de redução da potência elétrica consideram condições hipotéticas de operação. A manutenção da vazão e da altura manométrica total deve ser verificada no sistema real.
 
-O histórico é local, em `database/eficiagro.db`, compatível com a estrutura anterior. Para outro caminho, defina a variável `EFICIAGRO_DB`. Não há autenticação ou isolamento multiusuário; não publicar uma instalação com dados de propriedades em servidor compartilhado sem adicionar esses controles. Exportações contêm os dados inseridos.
+A análise tarifária considera os parâmetros informados pelo usuário e o limite de até 8,5 horas diárias para aplicação do desconto. As condições de concessão do benefício devem ser verificadas junto à distribuidora de energia elétrica.
 
-## Limites da entrega
+A análise econômica não calcula separadamente parcelas de demanda, encargos, tributos ou bandeiras tarifárias. O retorno do investimento é estimado pelo método do payback simples.
 
-Aprovação de testes é evidência das rotinas examinadas, não prova de ausência de defeitos. Não foram realizados ensaios de campo, medição de rendimento, avaliação com produtores ou homologação regulatória. A adequação editorial do TCC utiliza a Resolução CONAC/UFRB nº 053/2022. A modalidade é monografia. A divergência de espaçamento do resumo e as informações da banca precisam de conferência da autora e orientadora; consulte docs/auditoria/RELATORIO_REVISAO_V32.md.
+## Armazenamento de dados
 
-## Enquadramento acadêmico atualizado
+O histórico de análises utiliza SQLite e permanece desabilitado por padrão.
 
-O EficiAgro V3.2 é um protótipo em aperfeiçoamento apresentado em monografia. O uso proposto é apoio à análise preliminar por profissionais técnicos e uso acompanhado por produtores. Benefícios de usabilidade e economia em campo ainda exigem avaliação. A auditoria em docs/auditoria/RELATORIO_REVISAO_V32.md registra a conferência bibliográfica de 5 nov. 2026.
+Para habilitar o armazenamento em ambiente local e privado, deve-se definir a variável `EFICIAGRO_ENABLE_HISTORY=1`.
 
-## Revisão V3.2.1 — 25/11/2026
+O banco de dados é armazenado em `database/eficiagro.db`, podendo ser definido outro caminho por meio da variável `EFICIAGRO_DB`.
 
-Histórico desabilitado por padrão. Para uso individual privado, defina `EFICIAGRO_ENABLE_HISTORY=1` (PowerShell: `$env:EFICIAGRO_ENABLE_HISTORY='1'`; Linux/macOS: `export EFICIAGRO_ENABLE_HISTORY=1`). Não habilite em servidor público. O banco vazio original foi retirado do pacote; será criado quando necessário. Os resultados anteriores estão em `validation/historico_v32`. A revisão atual executou 86 testes, com módulo de interface ignorado por falta de Streamlit (dois casos não executados). As versões fixadas originais foram preservadas, mas sua instalação não foi confirmada. Consulte `docs/auditoria/REVISAO_V321.md`.
+A aplicação não dispõe de autenticação ou isolamento de dados entre usuários. O histórico não deve ser habilitado em ambientes públicos ou compartilhados.
 
-## Revisão V3.2.2 — candidato à defesa
+## Limitações
 
-Consulte `docs/auditoria/REVISAO_V322.md`. Evidência atual: 95 testes aprovados, dois casos de interface não executados (um módulo ignorado), 25 comparações e 15 verificações internas aprovadas. O ambiente efetivo desta execução foi Python 3.13.5; o registro anterior de Python 3.12 é histórico. Não houve nova auditoria externa das referências nem validação de campo. Para a defesa, execute os comandos acima em ambiente com Streamlit instalado e confirme que não há testes ignorados.
+O EficiAgro destina-se à análise energética preliminar e à comparação de cenários operacionais. Não realiza o dimensionamento hidráulico completo da instalação, o cálculo da evapotranspiração, a determinação da demanda hídrica da cultura ou a avaliação agronômica do manejo da irrigação.
+
+Os resultados são condicionados aos dados de entrada e às hipóteses adotadas.
+
+O protótipo foi submetido a verificações matemáticas, numéricas e computacionais, sem validação experimental em campo.
+
+## Desenvolvimento
+
+**Autora:** Emily Aderno Leite
+
+**Orientadora:** Gabriele Costa Gonçalves Dantas
+
+**Curso:** Engenharia de Energias
+
+**Instituição:** Universidade Federal do Recôncavo da Bahia (UFRB)
+
+**Ano:** 2026
+
+**Versão:** 3.2.2
