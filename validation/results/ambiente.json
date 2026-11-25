@@ -1,0 +1,12 @@
+{
+  "python": "3.13.5",
+  "plataforma": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "dependencias": {
+    "streamlit": "n\u00e3o instalado",
+    "pandas": "2.2.3",
+    "openpyxl": "3.1.5",
+    "reportlab": "4.4.9",
+    "pytest": "9.0.2",
+    "pypdf": "5.9.0"
+  }
+}

@@ -1,0 +1,107 @@
+[
+  {
+    "codigo": "V01",
+    "descricao": "Consumo diário",
+    "esperado": "33,00 kWh",
+    "obtido": "33.00 kWh",
+    "aprovado": true
+  },
+  {
+    "codigo": "V02",
+    "descricao": "Consumo mensal",
+    "esperado": "660,00 kWh",
+    "obtido": "660.00 kWh",
+    "aprovado": true
+  },
+  {
+    "codigo": "V03",
+    "descricao": "Consumo anual em 12 meses",
+    "esperado": "7.920,00 kWh",
+    "obtido": "7920.00 kWh",
+    "aprovado": true
+  },
+  {
+    "codigo": "V04",
+    "descricao": "Custo anual",
+    "esperado": "R$ 7.524,00",
+    "obtido": "R$ 7524.00",
+    "aprovado": true
+  },
+  {
+    "codigo": "V05",
+    "descricao": "Tarifa efetiva com desconto de 30%",
+    "esperado": "R$ 0,665/kWh",
+    "obtido": "R$ 0.665/kWh",
+    "aprovado": true
+  },
+  {
+    "codigo": "V06",
+    "descricao": "Desconto tarifário não altera consumo",
+    "esperado": "7.920,00 kWh",
+    "obtido": "7920.00 kWh",
+    "aprovado": true
+  },
+  {
+    "codigo": "V07",
+    "descricao": "Redução do tempo reduz consumo",
+    "esperado": "menor que atual",
+    "obtido": "7128.00",
+    "aprovado": true
+  },
+  {
+    "codigo": "V08",
+    "descricao": "Redução simulada de potência reduz consumo",
+    "esperado": "menor que atual",
+    "obtido": "6969.60",
+    "aprovado": true
+  },
+  {
+    "codigo": "V09",
+    "descricao": "Cenário combinado tem menor custo",
+    "esperado": "menor entre cenários",
+    "obtido": "R$ 4171.31",
+    "aprovado": true
+  },
+  {
+    "codigo": "V10",
+    "descricao": "Indicador por hectare",
+    "esperado": "1.584,00 kWh/ha.ano",
+    "obtido": "1584.00",
+    "aprovado": true
+  },
+  {
+    "codigo": "V11",
+    "descricao": "Anualização sazonal em 6 meses",
+    "esperado": "3.960,00 kWh",
+    "obtido": "3960.00",
+    "aprovado": true
+  },
+  {
+    "codigo": "V12",
+    "descricao": "Potência hidráulica Q=36 m³/h, H=10 m",
+    "esperado": "0,981 kW",
+    "obtido": "0.981 kW",
+    "aprovado": true
+  },
+  {
+    "codigo": "V13",
+    "descricao": "Eficiência global 70% × 90%",
+    "esperado": "63,0%",
+    "obtido": "63.0%",
+    "aprovado": true
+  },
+  {
+    "codigo": "V14",
+    "descricao": "Potência elétrica estimada",
+    "esperado": "1,557 kW",
+    "obtido": "1.557 kW",
+    "aprovado": true
+  },
+  {
+    "codigo": "V15",
+    "descricao": "Horas anuais de operação",
+    "esperado": "1.440 h",
+    "obtido": "1440 h",
+    "aprovado": true
+  }
+]

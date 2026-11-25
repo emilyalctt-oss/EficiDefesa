@@ -1,0 +1,22 @@
+{
+  "propriedade": "Caso sintético demonstrativo",
+  "municipio": "Não se aplica",
+  "cultura": "Café arábica",
+  "sistema": "Gotejamento",
+  "area_ha": 5,
+  "potencia_kw": 5.5,
+  "horas_dia": 6,
+  "dias_mes": 20,
+  "tarifa": 0.95,
+  "desconto": 30,
+  "reducao_horas_pct": 10.0,
+  "melhoria_bomba_pct": 12.0,
+  "rendimento_bomba": 65.0,
+  "rendimento_motor": 85.0,
+  "meses_operacao_ano": 12,
+  "vazao_m3h": 36,
+  "altura_mca": 10,
+  "horas_elegiveis_desconto": 6,
+  "origem_dados": "Caso sintético",
+  "observacoes_dados": "Valores didáticos; sem levantamento de campo."
+}

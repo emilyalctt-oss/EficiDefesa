@@ -1,0 +1,3 @@
+id,regra,limitacao,refs
+TAR001,"h_desc=min(h_operacao,h_elegivel)",Hipótese de alocação; no máximo 8.5 h/dia neste modelo,REF019
+TAR002,Tarifa base informada; desconto entre 0 e 90%,Não determina direito ao benefício; não calcula tributos/demanda,REF009;REF019

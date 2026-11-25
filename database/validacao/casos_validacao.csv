@@ -1,0 +1,9 @@
+id,descricao,potencia_kw,horas_dia,dias_mes,tarifa,area_ha,desconto,reducao_pct,melhoria_pct,consumo_esperado_kwh_ano,custo_esperado_rs_ano,cenario_alvo
+T01,Base matemática,5.5,6,20,0.95,5,0,10,12,7920.0,7524.0,Atual
+T02,Tarifa unitária,10,1,30,1.0,10,0,0,0,3600.0,3600.0,Atual
+T03,Desconto 30%,5.5,6,20,0.95,5,30,0,0,7920.0,5266.8,Horário com desconto
+T04,Redução tempo 10%,5.5,6,20,0.95,5,0,10,0,7128.0,6771.6,Redução do tempo de operação
+T05,Melhoria potência 12%,5.5,6,20,0.95,5,0,0,12,6969.6,6621.12,Melhoria do conjunto motobomba
+T06,Combinado,5.5,6,20,0.95,5,30,10,12,6272.64,4171.3056,Cenário combinado
+T07,Área não muda consumo,5.5,6,20,0.95,10,0,0,0,7920.0,7524.0,Atual
+T08,Operação mínima,1,1,1,1.0,1,0,0,0,12.0,12.0,Atual

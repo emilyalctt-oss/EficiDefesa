@@ -1,0 +1,17 @@
+id,autor_instituicao,titulo,tipo_documento,nivel_evidencia,aplicacao_eficiagro,url
+REF001,ANA,Atlas Irrigação: uso da água na agricultura irrigada,Relatório técnico institucional,A,Contextualização da irrigação e uso eficiente de água,https://www.ana.gov.br/atlasirrigacao/
+REF002,Embrapa,Irrigação em cafeeiros,Documento técnico institucional,A,Necessidade hídrica e manejo do cafeeiro irrigado,https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1040722/1/Cafe-na-AmazoniaDENIS.pdf
+REF003,Embrapa Cerrados,Coeficientes técnicos para irrigação do cafeeiro no Cerrado,Circular técnica,A,Coeficientes e contexto agronômico do café arábica,https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1061432/1/Cirtec32.pdf
+REF004,Embrapa Cerrados,Recomendações técnicas para o cultivo irrigado do café no Cerrado,Comunicado técnico,A,Manejo e limitações da irrigação do café,https://www.infoteca.cnptia.embrapa.br/infoteca/bitstream/doc/1135273/1/CT-48-web.pdf
+REF005,Incaper,Irrigação do Cafeeiro Conilon,Capítulo técnico,A,Irrigação e fases críticas do conilon,https://biblioteca.incaper.es.gov.br/digital/bitstream/item/705/1/livro2007cafeconilon13.pdf
+REF006,Incaper,"Café Conilon, 2ª edição",Livro técnico,A,Caracterização e manejo do café conilon,https://biblioteca.incaper.es.gov.br/digital/bitstream/123456789/3114/1/Livro-Cafe-Conilon-2a-Edicao.pdf
+REF007,CNA/SENAR,"Café: manejo de podas, desbrotas, irrigação e nutrição",Manual técnico,A,Fases críticas e justificativa da irrigação,https://www.cnabrasil.org.br/assets/arquivos/189-CAF%C3%89.pdf
+REF008,CNA/SENAR,Irrigação: manejo e gestão em sistema localizado,Manual técnico,A,Características de gotejamento e microaspersão,https://www.cnabrasil.org.br/assets/arquivos/251-IRRIGA%C3%87%C3%83O.pdf
+REF009,ANEEL,Resolução Normativa ANEEL nº 1.000/2021,Norma regulatória,A,Regras gerais de fornecimento e enquadramento rural,https://www.gov.br/aneel/pt-br/assuntos/campanhas/resolucao-1000-da-aneel-seus-direitos-sobre-energia-eletrica-agora-num-so-lugar-2022
+REF010,CNA,Desconto da tarifa de energia elétrica para irrigação na área da Sudene,Nota técnica,A,Referência de desconto; deve ser confirmado com a distribuidora,https://cnabrasil.org.br/publicacoes/alteracao-no-desconto-da-tarifa-de-energia-eletrica-para-irrigacao-na-area-atendida-pela-sudene
+REF011,PROCEL/Gomes,Sistemas de Irrigação: Eficiência Energética,Manual técnico,A,"Bombeamento, perdas e eficiência energética",https://www.bibliotecaagptea.org.br/agricultura/irrigacao/livros/SISTEMAS%20DE%20IRRIGACAO%20EFICIENCIA%20ENERGETICA.pdf
+REF012,Scapin/UFRGS,Eficiência energética em sistemas de irrigação por bombeamento,Dissertação,C,Eficiência energética em bombeamento,https://lume.ufrgs.br/bitstream/handle/10183/212330/001113942.pdf?sequence=1
+REF013,FAO,Technical handbook on pressurized irrigation techniques,Manual técnico internacional,A,Fundamentos de sistemas pressurizados,https://www.fao.org/4/a1336e/a1336e.pdf
+REF014,FAO,Drip irrigation knowledge repository,Manual técnico internacional,A,Eficiência e operação do gotejamento,https://openknowledge.fao.org/bitstreams/3b089d91-bf20-4e51-8d59-789b6abf0ec0/download
+REF015,UC ANR,Microirrigation systems,Manual técnico,A,"Filtragem, regulagem e manutenção",https://ucanr.edu/sites/default/files/2011-02/73686.pdf
+REF016,Lima et al.,Avaliação e análise da eficiência energética na irrigação,Artigo científico,B,Indicadores de eficiência energética,https://www.scielo.br/j/rbeaa/a/Kc6B9vdSwgDMgh58nLYg8bP/?format=pdf&lang=pt

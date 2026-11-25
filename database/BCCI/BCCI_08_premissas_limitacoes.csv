@@ -1,0 +1,10 @@
+id,limitacao
+LIM001,"Resultados condicionais; não há validação de campo, metrológica ou agronômica."
+LIM002,Potência elétrica ativa deve representar a operação; potência nominal no eixo não é equivalente.
+LIM003,O custo inclui somente energia ativa pela tarifa informada; não reproduz a fatura completa.
+LIM004,O modelo usa horas/dia e dias/mês constantes e calendário de até 365 dias.
+LIM005,O menor custo simulado não comprova viabilidade técnica nem retorno econômico global.
+LIM006,Reduzir tempo reduz volume bombeado à vazão constante; o atendimento hídrico não é verificado.
+LIM007,"Redução de potência é hipótese, mantendo vazão e HMT; requer comprovação do ponto de operação."
+LIM008,Desconto e horas elegíveis são hipóteses; enquadramento e escala devem ser confirmados com a distribuidora. Não são inferidos pelo município.
+LIM009,"Sem vazão e HMT, não é possível verificar a compatibilidade energética com o serviço hidráulico."

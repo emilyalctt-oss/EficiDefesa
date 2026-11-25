@@ -1,0 +1,6 @@
+id,condicao,recomendacao,refs
+R001,Sempre,"Registrar a origem da potência elétrica, vazão e HMT no mesmo ponto de operação.",REF011;REF017
+R002,Sempre,"Inspecionar filtragem, emissores, pressão e vazamentos conforme o projeto.",REF008;REF015
+R003,reducao_horas_pct > 0,Confirmar atendimento hídrico antes de reduzir o tempo de operação.,REF002;REF003
+R004,melhoria_bomba_pct > 0,Confirmar por medições e curvas da bomba se a redução mantém vazão e HMT.,REF011;REF017
+R005,desconto > 0,"Confirmar elegibilidade, tarifa e escala de horas com a distribuidora.",REF009;REF019

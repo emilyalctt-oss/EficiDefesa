@@ -1,0 +1,7 @@
+id,parametro,unidade,uso,refs
+ENE001,Potência elétrica ativa,kW,Entrada usada nos cenários; distinta da potência no eixo,REF011
+ENE002,Vazão,m³/h,Convertida para m³/s no cálculo hidráulico,REF011
+ENE003,HMT,m,Entrada; não calculada por dimensionamento,REF011
+ENE004,Rendimentos,%,Produto convertido para fração; não substitui potência informada,REF011
+ENE005,Tempo,h/dia; dias/mês; meses/ano,Regime constante; até 365 dias/ano,REF011
+ENE006,Tarifa e desconto,R$/kWh; %,Hipóteses informadas; desconto limitado às horas elegíveis,REF009;REF019

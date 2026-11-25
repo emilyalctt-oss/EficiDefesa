@@ -1,0 +1,26 @@
+indicador,referencia,obtido,erro_absoluto,tolerancia,aprovado,origem
+Atual / energia,7920.0,7920.0,0.0,1E-8,True,Aritmética decimal independente
+Atual / custo,7524.000,7524.0,0.000,1E-8,True,Aritmética decimal independente
+Atual / volume,51840,51840,0,1E-8,True,Aritmética decimal independente
+Atual / consumo_especifico,152.7777777777777777777777778,152.7777777777778,2.22222222222E-14,1E-8,True,Aritmética decimal independente
+Horário com desconto / energia,7920.0,7920.0,0.0,1E-8,True,Aritmética decimal independente
+Horário com desconto / custo,5266.80000,5266.799999999999,1E-12,1E-8,True,Aritmética decimal independente
+Horário com desconto / volume,51840,51840,0,1E-8,True,Aritmética decimal independente
+Horário com desconto / consumo_especifico,152.7777777777777777777777778,152.7777777777778,2.22222222222E-14,1E-8,True,Aritmética decimal independente
+Redução do tempo de operação / energia,7128.00,7128.0,0.00,1E-8,True,Aritmética decimal independente
+Redução do tempo de operação / custo,6771.6000,6771.599999999999,1E-12,1E-8,True,Aritmética decimal independente
+Redução do tempo de operação / volume,46656.0,46656.0,0.0,1E-8,True,Aritmética decimal independente
+Redução do tempo de operação / consumo_especifico,152.7777777777777777777777778,152.7777777777778,2.22222222222E-14,1E-8,True,Aritmética decimal independente
+Melhoria do conjunto motobomba / energia,6969.600,6969.599999999999,1E-12,1E-8,True,Aritmética decimal independente
+Melhoria do conjunto motobomba / custo,6621.12000,6621.119999999999,1E-12,1E-8,True,Aritmética decimal independente
+Melhoria do conjunto motobomba / volume,51840,51840,0,1E-8,True,Aritmética decimal independente
+Melhoria do conjunto motobomba / consumo_especifico,134.4444444444444444444444444,134.44444444444443,1.44444444444E-14,1E-8,True,Aritmética decimal independente
+Cenário combinado / energia,6272.6400,6272.639999999999,1E-12,1E-8,True,Aritmética decimal independente
+Cenário combinado / custo,4171.30560000,4171.305599999999,1E-12,1E-8,True,Aritmética decimal independente
+Cenário combinado / volume,46656.0,46656.0,0.0,1E-8,True,Aritmética decimal independente
+Cenário combinado / consumo_especifico,134.4444444444444444444444444,134.44444444444443,1.44444444444E-14,1E-8,True,Aritmética decimal independente
+Ph sintético,0.9810,0.9810000000000001,1E-16,1E-8,True,Aritmética decimal independente
+Pe sintético eta=0.63,1.557142857142857142857142857,1.5571428571428574,2.57142857143E-16,1E-8,True,Aritmética decimal independente
+Ph exemplo publicado,30.58,30.578947199999998,0.001052800000002,0.005,True,"Gomes (2013), Exemplo 6.1 conforme registro anterior; fonte primária não reconferida"
+Pe exemplo publicado,56.628,56.62767999999999,0.00032000000001,0.0005,True,"Gomes (2013), Exemplo 6.1 conforme registro anterior; fonte primária não reconferida"
+Tarifa parcial / custo,11340.0,11340.0,0.0,1E-8,True,Aritmética decimal independente

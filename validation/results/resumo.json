@@ -1,0 +1,7 @@
+{
+  "comparacoes": 25,
+  "aprovadas": 25,
+  "suite_interna": 15,
+  "suite_aprovadas": 15,
+  "natureza": "Verificação computacional e comparação com exemplo publicado; sem validação de campo."
+}

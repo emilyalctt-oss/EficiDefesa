@@ -1,0 +1,12 @@
+id,indicador,unidade,formula,premissas,refs
+IND001,Potência hidráulica,kW,rho*g*(Q_m3h/3600)*H/1000,rho=1000 kg/m³; g=9.81 m/s²,REF011
+IND002,Rendimento global informado,%,100*(eta_b/100)*(eta_m/100),Não é rendimento medido,REF011
+IND003,Potência elétrica estimada,kW,Ph/((eta_b/100)*(eta_m/100)),Informativa; não substitui Pe de entrada,REF011
+IND004,Energia anual,kWh/ano,Pe*h*d*m,Pe e Q constantes durante operação,REF011
+IND005,Volume anual,m³/ano,Q_m3h*h*d*m,Vazão representativa constante,REF011
+IND006,Consumo por volume,kWh/1000 m³,1000*E/V,Comparar serviço hidráulico e HMT; sem benchmark universal,REF011;REF017
+IND007,Custo anual,R$/ano,E_desc*T*(1-desconto/100)+E_sem_desc*T,Sem demanda e demais parcelas da fatura,REF009;REF019
+IND008,Economia anual,R$/ano,C_atual-C_cenario,Diferença assinada; custo de referência,REF011
+IND009,Payback simples,meses,12*investimento/economia_anual,Economia positiva; sem desconto financeiro,REF011
+IND010,Indicadores por área,kWh/ha.ano; R$/ha.ano; kW/ha,E/A; C/A; Pe/A,Descritivos; sem faixas universais,REF016
+IND011,Rendimento implícito,%,100*Ph/Pe_informada,Mesma vazão e HMT; não é ensaio certificado,REF011
